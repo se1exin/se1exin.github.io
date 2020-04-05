@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building An Automatic Telescope"
+title: "Building an Automatic Telescope"
 date: 2020-03-18 12:11:00 +1000
 
 youtubeId: X1VTMy0LoMA
@@ -10,7 +10,7 @@ I was recently watching TV and had the thought: what would be required to build
 a telescope that could automatically find any planet or star in the sky for you?
 
 
-Here's my initial sketches from that evening while watching TV (exuse my lack of artistic-ness).
+Here's my initial sketches from that evening while watching TV (excuse my lack of artistic-ness).
 
 ![Sketches of Telescope Ideas][telescope_sketches]
 
