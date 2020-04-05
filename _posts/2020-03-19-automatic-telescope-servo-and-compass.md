@@ -12,10 +12,10 @@ and am very much still in the prototyping phase.
 Since [my last post](/2020/03/18/building-an-automatic-telescope.html), I thought I would investigate
 adding a compass sensor to the mix, so that I can start implementing the X axis control of the telescope.
 The theory is that if I can find the position of the telescope's X axis relative to north, I can then
-rotate it to point at any position along the 360&deg; X plane (I'll figure out the Y axis later).
+rotate it to point at any position along the 360&deg; X plane to find a planet or star. I'll figure out the Y axis later.
 
-I ran out to Jaycar (Australia's version of Radioshack) and picked up a cheap compass sensor, and while
-I was there I came across a cheap stepper motor, which I decided I would try out instead of a servo to see
+I ran out to Jaycar (Australia's version of Radioshack) and picked up a cheap compass sensor. While
+I was there I came across a cheap stepper motor which I decided I would try out instead of the servo to see
 if there was any gain in control and accuracy.
 
 Here are the parts that I bought:
@@ -27,25 +27,26 @@ After some modification to the beer-can-and-pencil prototype I had retrofitted t
 
 ![Stepper Motor Beer Can][stepper_beer_can]
 
-Now that the stepper motor is attached to the beer can, it was time to add the compass module to the Arduino,
+Now that the stepper motor had been attached to the beer can, it was time to add the compass module to the Arduino,
 which will in turn tell the motor to rotate either clockwise or anti-clockwise until the compass points
 at the desired point.
 
 Here's a video of it in action, with the stepper trying to find magnetic north.
-In case you were wonder and can't see it in the video, the compass is blutak-ed to the top of the can,
+In case you were wondering and can't see it in the video, the compass is blutak-ed to the top of the can,
 with the wires running through the middle of the can.
 
 {% include youtubeEmbed.html id=page.youtubeId %}
 
-> The video is a bit long sorry, for a break down: The first 38 seconds is compass calibration.
-The full next minute is it rotating to find north.
-After that (around 1:40) you can see the stepper motor re-adjusting to find north as I disorient and move it around.
+> The video is a bit long (sorry). Here's the breakdown in case you want to skip ahead:
+- The first 38 seconds is compass calibration.
+- The full next minute (00:38 - 1:40) is rotating clockwise to find north.
+- After that (around 1:40) you can see the stepper motor re-adjusting to find north as I disorient and move it around.
 
 ### A few take-aways from this experiment:
 
 As you might notice, the stepper motor is super slow, which could be excused if it had a high resolution,
-but it does not. I'll probably get a better stepper motor for the X Axis soon - I haven't used stepper
-motors in the past, so I need to do some more research first.
+but it does not. I'll probably get a better stepper motor for the X axis soon - I haven't used stepper
+motors in the past, so I need to do some more research before spending any more money in this department.
 
 Additionally, the compass module is quite inaccurate and I can find very little documentation for it - so again I'll probably try to find a better compass sensor. Another thing to consider is that the Y Axis control will very likely need some sensors such as an accelerometer and/or gyro. I actually
 have a spare MPU-6050 which I could use, but it's a pain-in-the-butt to write code for.
