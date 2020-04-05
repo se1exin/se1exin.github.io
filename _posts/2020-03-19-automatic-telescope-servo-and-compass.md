@@ -10,9 +10,12 @@ I've recently starting [building an automatic telescope](/2020/03/18/building-an
 and am very much still in the prototyping phase.
 
 Since [my last post](/2020/03/18/building-an-automatic-telescope.html), I thought I would investigate
-adding a compass sensor to the mix, so that I can start implementing the X axis control of the telescope.
-The theory is that if I can find the position of the telescope's X axis relative to north, I can then
-rotate it to point at any position along the 360&deg; X plane to find a planet or star. I'll figure out the Y axis later.
+adding a compass sensor to the mix so that I can start implementing the X axis control of the telescope.
+The theory is that if I can find the position of the telescope on the X axis relative to north,
+I can use that position as a reference point to find the &theta; position of a planet or star.
+I'll figure out the Y axis later.
+
+![Using a compass sensor to find a position on the X axis][compass_illustration]
 
 I ran out to Jaycar (Australia's version of Radioshack) and picked up a cheap compass sensor. While
 I was there I came across a cheap stepper motor which I decided I would try out instead of the servo to see
@@ -58,3 +61,4 @@ Looks like I need to do some more research and get some better parts.
 
 
 [stepper_beer_can]: /assets/img/2020-03-19-stepper-beer-can.jpg "Stepper Motor Beer Can"
+[compass_illustration]: /assets/img/2020-03-19-compass-illustration.jpg "Using a compass sensor to find a position on the X axis"
